@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/home_background">
+
+    <!-- Toolbar Superior -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Texto de Boas Vindas -->
+            <TextView
+                android:id="@+id/txtBoasVindas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OLÁ, PEDRO HENRIQUE"
+                android:textColor="@color/lipson_red"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Carrossel (Aumentamos a altura para o calendário aparecer) -->
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPagerCarousel"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Lista de Serviços (Botões Estilizados) -->
+            <include layout="@layout/item_servico_card" android:id="@+id/btnBeneficios" />
+            <include layout="@layout/item_servico_card" android:id="@+id/btnHolerites" />
+            <include layout="@layout/item_servico_card" android:id="@+id/btnExames" />
+            <include layout="@layout/item_servico_card" android:id="@+id/btnAtestados" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

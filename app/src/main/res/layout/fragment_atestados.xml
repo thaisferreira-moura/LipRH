@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFBF0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <!-- Banner Superior -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_banner_white"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Adicione seus atestados"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Área de Upload -->
+        <LinearLayout
+            android:id="@+id/areaUpload"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/shape_button_exame"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_pdf_upload" /> <!-- Importe um ícone de PDF -->
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Adicione uma foto ou arquivo PDF do seu atestado acima"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="14sp" />
+
+        <!-- Seleção de Tipo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/shape_button_exame"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Informe o seu tipo de atestado:"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="12dp"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupAtestados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton android:text="Afastamento (doença/acidente)" android:textSize="13sp" android:textStyle="bold"/>
+                <RadioButton android:text="Comparecimento (consultas/exames)" android:textSize="13sp" android:textStyle="bold"/>
+                <RadioButton android:text="Acompanhamento (cuidado familiar)" android:textSize="13sp" android:textStyle="bold"/>
+                <RadioButton android:text="Atestado de saúde ocupacional (ASO)" android:textSize="13sp" android:textStyle="bold"/>
+                <RadioButton android:text="Licença luto" android:textSize="13sp" android:textStyle="bold"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Botão Enviar -->
+        <Button
+            android:id="@+id/btnEnviarAtestado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_button_exame"
+            android:text="Enviar atestado"
+            android:textAllCaps="false"
+            android:textColor="#A52A2A"
+            android:textStyle="bold"
+            android:paddingHorizontal="40dp"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFBF0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/txtTituloGestao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Funcionários cadastrados"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_label_white"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="8dp"
+            android:text="Funcionários cadastrados"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <!-- Lista de Funcionários (Simulada ou via RecyclerView) -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFuncionariosCadastrados"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="10dp" />
+
+        <!-- Formulário de Cadastro -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_edittext_white"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Adicionar funcionário"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <EditText android:id="@+id/etCadNome" style="@style/InputCadastro" android:hint="Nome:" />
+            <EditText android:id="@+id/etCadCpf" style="@style/InputCadastro" android:hint="CPF:" android:inputType="number" />
+            <EditText android:id="@+id/etCadEndereco" style="@style/InputCadastro" android:hint="Endereço:" />
+            <EditText android:id="@+id/etCadAdmissao" style="@style/InputCadastro" android:hint="Data de admissão (AAAA-MM-DD):" />
+            <EditText android:id="@+id/etCadCargo" style="@style/InputCadastro" android:hint="Cargo (RH ou COLABORADOR):" />
+            <EditText android:id="@+id/etCadSenha" style="@style/InputCadastro" android:hint="Senha:" android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/btnSalvarFuncionario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="Salvar alterações"
+                android:textColor="#A52A2A"
+                android:strokeColor="#A52A2A"
+                android:strokeWidth="1" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

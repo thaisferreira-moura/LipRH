@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFBF0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Cabeçalho do Perfil -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/imgFotoPerfil"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_user_circle" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtNomePerfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Maria Ramos"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtCargoResumo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gestora de recursos humanos"
+                    android:textColor="#7D8585"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Informações Pessoais -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="informações pessoais"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView android:id="@+id/txtTelefone" style="@style/PerfilInfoBox" android:text="Telefone: (11) 9876-5678" />
+        <TextView android:id="@+id/txtCpfPerfil" style="@style/PerfilInfoBox" android:text="CPF: 123.456.789-00" />
+        <TextView android:id="@+id/txtDataNasc" style="@style/PerfilInfoBox" android:text="Data de Nascimento: 09/03/1979" />
+
+        <!-- Informações Profissionais -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="informações profissionais"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView android:id="@+id/txtCargoFull" style="@style/PerfilInfoBox" android:text="Cargo: Gestora de recursos de RH" />
+        <TextView android:id="@+id/txtSetor" style="@style/PerfilInfoBox" android:text="Setor: Escritório de RH" />
+        <TextView android:id="@+id/txtHorario" style="@style/PerfilInfoBox" android:text="Horario de trabalho: 06h - 14h" />
+        <TextView android:id="@+id/txtAdmissao" style="@style/PerfilInfoBox" android:text="Data de Admissão: 10/05/2010" />
+
+    </LinearLayout>
+</ScrollView>

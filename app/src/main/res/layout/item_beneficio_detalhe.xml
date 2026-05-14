@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:background="#FFFFFF">
+
+        <!-- Ícone Circular -->
+        <View
+            android:id="@+id/viewCircle"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/circle_background_gray" />
+
+        <ImageView
+            android:id="@+id/imgBeneficioIcone"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignTop="@id/viewCircle"
+            android:layout_alignBottom="@id/viewCircle"
+            android:layout_alignStart="@id/viewCircle"
+            android:layout_alignEnd="@id/viewCircle"
+            android:src="@drawable/ic_medico" />
+
+        <!-- Status ATIVO/INATIVO -->
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="#F0FFF0"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="2dp"
+            android:text="ATIVO"
+            android:textColor="#2E7D32"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <!-- Bloco de Textos (Apenas Título e Descrição) -->
+        <LinearLayout
+            android:id="@+id/containerTextos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/viewCircle"
+            android:layout_toStartOf="@id/txtStatus"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtTituloBeneficio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Título"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtStatusBeneficio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pendente"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtSubtituloBeneficio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descrição do benefício"
+                android:textColor="#666666"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- Container de Ações (Link + Botões na mesma linha) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/containerTextos"
+            android:layout_toEndOf="@id/viewCircle"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Link "ver detalhes" agora na mesma linha -->
+            <TextView
+                android:id="@+id/btnVerDetalhes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="ver detalhes"
+                android:textColor="#A52A2A"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <!-- Espaçador para empurrar os botões para a direita -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCancelar"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/shape_btn_outline_red"
+                android:backgroundTint="@null"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:paddingHorizontal="10dp"
+                android:text="cancelar"
+                android:textAllCaps="false"
+                android:textColor="#B22222"
+                android:textSize="11sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAderir"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/shape_btn_outline_green"
+                android:backgroundTint="@null"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:paddingHorizontal="10dp"
+                android:text="aderir"
+                android:textAllCaps="false"
+                android:textColor="#1B5E20"
+                android:textSize="11sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSolicitar"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:background="@drawable/shape_btn_black"
+                android:backgroundTint="@null"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:paddingHorizontal="10dp"
+                android:text="solicitar"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

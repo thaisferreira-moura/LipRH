@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardBackgroundColor="#F2F2F2"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/imgAvatarHolerite"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/ic_user_circle" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/imgAvatarHolerite"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtNomeHolerite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="João Silva"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txtCpfHolerite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123.456.789-00"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+
+            <!-- Selo de Status -->
+            <TextView
+                android:id="@+id/txtStatusHolerite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="2dp"
+                android:text="Pendente"
+                android:textColor="#000000"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:background="@drawable/shape_status_pendente" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btnUploadPdf"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_pdf_upload" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

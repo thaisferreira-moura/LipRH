@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFBF0"
+    android:orientation="vertical">
+
+    <!-- Header com Saudacao (Nome dinâmico vindo da MainActivity) -->
+    <TextView
+        android:id="@+id/txtSaudacaoRH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="OLÁ, MARIA"
+        android:textColor="#A52A2A"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Card do Calendario Reutilizavel -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <!-- Componente de Calendario Nativo -->
+                    <CalendarView
+                        android:id="@+id/calendarView"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:firstDayOfWeek="1" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Lista de Opcoes do Menu RH -->
+            <include android:id="@+id/btnRhuBeneficios" layout="@layout/item_menu_rh" />
+            <include android:id="@+id/btnRhuHolerites" layout="@layout/item_menu_rh" />
+            <include android:id="@+id/btnRhuExames" layout="@layout/item_menu_rh" />
+            <include android:id="@+id/btnRhuCertificacoes" layout="@layout/item_menu_rh" />
+
+            <!-- Espacamento extra para nao cobrir o BottomNav -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

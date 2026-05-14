@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FDFBF0">
+
+    <!-- Toolbar Permanente (Não sobe com o scroll) -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#A52A2A"
+        android:paddingHorizontal="16dp">
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/menu"
+            app:tint="@android:color/white" />
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/notification"
+            app:tint="@android:color/white" />
+    </RelativeLayout>
+
+    <!-- ScrollView permite rolar o conteúdo abaixo da toolbar -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Benefícios"
+                android:textColor="@android:color/black"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gerencie seus benefícios de forma rápida e fácil"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- IDs únicos para evitar a repetição de nomes via código -->
+            <include android:id="@+id/cardMedico" layout="@layout/item_beneficio_detalhe" />
+            <include android:id="@+id/cardOdonto" layout="@layout/item_beneficio_detalhe" />
+            <include android:id="@+id/cardTransporte" layout="@layout/item_beneficio_detalhe" />
+            <include android:id="@+id/cardSeguro" layout="@layout/item_beneficio_detalhe" />
+            <include android:id="@+id/cardAlimentacao" layout="@layout/item_beneficio_detalhe" />
+            <include android:id="@+id/cardSesi" layout="@layout/item_beneficio_detalhe" />
+
+            <!-- Espaçamento extra no final para não ficar colado na barra de navegação -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

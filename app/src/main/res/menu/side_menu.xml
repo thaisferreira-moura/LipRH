@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/side_perfil"
+        android:icon="@drawable/ic_user_circle_menu"
+        android:title="Perfil" />
+    <item
+        android:id="@+id/side_funcionarios"
+        android:icon="@drawable/ic_group"
+        android:title="Funcionários" />
+    <item
+        android:id="@+id/side_faq"
+        android:icon="@drawable/ic_faq_question"
+        android:title="FAQ" />
+    <item
+        android:id="@+id/side_beneficios"
+        android:icon="@drawable/ic_handshake"
+        android:title="Benefícios" />
+    <item
+        android:id="@+id/side_atestados"
+        android:icon="@drawable/ic_medical"
+        android:title="Atestados" />
+    <item
+        android:id="@+id/side_ferias"
+        android:icon="@drawable/ic_beach_vacation"
+        android:title="Férias" />
+</menu>

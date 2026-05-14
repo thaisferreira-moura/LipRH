@@ -1,0 +1,53 @@
+CREATE DATABASE IF NOT EXISTS lipson_db;
+USE lipson_db;
+
+-- 1. Tabela Única de Usuários
+-- Centralizamos aqui todos os funcionários, inclusive os do RH
+CREATE TABLE IF NOT EXISTS usuario (
+    cpf VARCHAR(11) PRIMARY KEY NOT NULL,
+    nome VARCHAR(100) NOT NULL,
+    endereco VARCHAR(100) NOT NULL,
+    data_admissao DATE NOT NULL,
+    data_nascimento DATE,
+    cargo VARCHAR(50) NOT NULL, -- Aqui definiremos se é 'RH' ou 'COLABORADOR'
+    senha VARCHAR(100) NOT NULL  -- Aumentado para suportar hashes de segurança
+);
+
+-- 2. Tabela de Permissões de RH (Opcional, mas recomendada para controle fino)
+-- Se o CPF estiver nesta tabela, ele tem acesso às funções de administrador
+CREATE TABLE IF NOT EXISTS rh_permissao (
+    cpf VARCHAR(11) PRIMARY KEY NOT NULL,
+    nivel_acesso INT DEFAULT 1, -- 1 para RH Comum, 2 para Gerente RH
+    CONSTRAINT fk_usuario_rh FOREIGN KEY (cpf) REFERENCES usuario(cpf) ON DELETE CASCADE
+);
+
+-- Inserindo um usuário comum (Colaborador)
+INSERT INTO usuario (cpf, nome, endereco, data_admissao, cargo, senha) 
+VALUES ('12345678901', 'Pedro Guerdis', 'Rua Exemplo, 123', '2024-01-10', 'DESENVOLVEDOR', '1234');
+
+-- Inserindo um usuário que pertence ao RH
+INSERT INTO usuario (cpf, nome, endereco, data_admissao, cargo, senha) 
+VALUES ('00123456789', 'roberta', 'Av. Industrial, 500', '2023-05-13', 'RH', 'admin123');
+
+-- Dando permissão administrativa para a Maria
+INSERT INTO rh_permissao (cpf, nivel_acesso) VALUES ('98765432100', 1);
+
+UPDATE usuario SET cargo = 'RH' WHERE cpf = '98765432100';
+
+
+select * from usuario;
+select 
+
+
+
+
+
+Comandos para ligar o servidor
+
+./mvnw spring-boot:run
+
+ls
+
+$env:JAVA_HOME = "C:\Program Files\Android\Android Studio\jbr"
+
+echo $env:JAVA_HOME
