@@ -8,6 +8,12 @@ O projeto foi criado durante o **Hackathon Diadema**, com o objetivo de solucion
 
 A proposta do aplicativo é aproximar colaboradores e empresa através da tecnologia, oferecendo praticidade, automação e uma experiência mais eficiente para todos os usuários.
 
+# 🎨 Layout
+
+<!-- AQUI VOCÊ PASSA O CAMINHO DA IMAGEM -->
+
+![Web1](https://github.com/thaisferreira-moura/LipRH/blob/main/miniatura%20rh.png)
+
 ---
 
 # ✨ Funcionalidades
