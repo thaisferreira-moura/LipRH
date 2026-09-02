@@ -2,7 +2,7 @@
 
 ## 📌 Sobre o Projeto
 
-O **lipRH** é uma plataforma digital inteligente desenvolvida para modernizar e centralizar os processos de Recursos Humanos dentro das empresas.
+O **lipRH** é uma plataforma digital inteligente desenvolvida durante o Hackathon Diadema, para modernizar e centralizar os processos de Recursos Humanos dentro das empresas.
 
 O projeto foi criado durante o **Hackathon Diadema**, com o objetivo de solucionar problemas relacionados à burocracia, comunicação interna e descentralização de informações no setor de RH.
 
